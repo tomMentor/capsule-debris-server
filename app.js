@@ -5,7 +5,7 @@
  * @Description: Server handle
  */
 
-const routers = require('./src/router/index')
+const routers = require('./src/router/request')
 const querystring = require('querystring')
 const disposePostData = require('./src/router/disposePostData')
 
