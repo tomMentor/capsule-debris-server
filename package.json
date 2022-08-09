@@ -6,11 +6,15 @@
   "author": "tomMentor <15026864008@163.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon ./bin/www.js"
+    "dev": "cross-env NODE_ENV=development nodemon ./bin/www.js",
+    "db:test": "node ./db/client.js",
+    "redis:test": "node ./db/redis.js"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "mongodb": "^4.8.0",
-    "nodemon": "^2.0.19"
+    "mongoose": "^6.4.7",
+    "nodemon": "^2.0.19",
+    "redis": "^4.2.0",
+    "xss": "^1.0.13"
   }
 }

@@ -6,10 +6,10 @@
  */
 const BaseModule = require('./baseModule')
 class SuccessModule extends BaseModule {
-  constructor(data, msg) {
+  constructor({ data, msg, code }) {
     super(data, msg)
     this.data = data
-    this.code = 200
+    this.code = code || 200
   }
 }
 

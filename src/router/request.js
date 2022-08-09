@@ -4,17 +4,17 @@
  * @LastEditors: Please set LastEditors
  * @Description: GET/POST
  */
-const router = require('../controller/index')
-function get(req, res) {
+const router = require('../../controller')
+async function get(req, res) {
   const path = `${req.method} ${req.path}`
   const request = router[path]
-  return request && request(req)
+  return request && await request(req, res)
 }
 
-function post(req, res) {
+async function post(req, res) {
   const path = `${req.method} ${req.path}`
   const request = router[path]
-  return request && request(req)
+  return request && await request(req, res)
 }
 
 module.exports = { GET: get, POST: post }
